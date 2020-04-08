@@ -1,0 +1,15 @@
+<h1>Task List</h1>
+
+<div id="task-form"></div>
+
+
+<%= link_to new_task_path, remote: true do %>
+    <button id="new-button">New</button>
+<% end %>
+
+
+
+<div id="tasks">
+    <%= render @tasks %>
+</div>
+
