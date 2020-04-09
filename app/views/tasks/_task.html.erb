@@ -1,5 +1,13 @@
-<tr>
-  <td>
-    <%= task.description %>
-  </td>
-</tr>
+<table>
+  <tr>
+    <td>
+      <%= task.description %>
+      <%= link_to edit_task_path(task), remote: true do %>
+        <button>Edit</button>
+      <% end %>
+      <%= link_to task, remote: true, method: "delete", data:{confirm: "Are you sure?"} do %>
+        <button>Delete</button>
+      <% end %>
+    </td>
+  </tr>
+</table>
